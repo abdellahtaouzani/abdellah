@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <title>sofku — Thumbnail Designer</title>
+</head>
+<body>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">✕</button>
+            <div class="modal-tag">✦ place an order</div>
+            <h2 class="modal-title">Let's get started</h2>
+            <p class="modal-plan-label">Selected plan: <strong id="modal-plan-name">—</strong></p>
+            <form class="modal-form" action="https://formspree.io/f/xwvajeep" method="POST">
+                <input type="hidden" name="plan" id="form-plan-input" />
+                <input type="text"  name="name"    placeholder="Your name"                   required />
+                <input type="email" name="email"   placeholder="Your email"                  required />
+                <input type="text"  name="channel" placeholder="Your YouTube / channel link"          />
+                <textarea name="message" placeholder="Tell me about your video — topic, vibe, any references or inspiration?" rows="4" required></textarea>
+                <button type="submit">Send order request →</button>
+            </form>
+            <div class="modal-success" id="modal-success">
+                <div class="success-icon">✓</div>
+                <h3>Request sent!</h3>
+                <p>I'll get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <header>
+        <nav id="mainNav">
+            <div class="logo">sofku</div>
+            <ul>
+                <li><a href="#intro">home</a></li>
+                <li><a href="#bio">about</a></li>
+                <li><a href="#projects">work</a></li>
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+            <a href="#pricing" class="cta">order</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <main>
+
+        <section id="intro">
+            <span class="intro-tag">✦ available for work</span>
+            <h1 class="hero-headline">
+                <span class="line-wrap"><span class="hero-line">Thumbnails that</span></span>
+                <span class="line-wrap"><span class="hero-line"><em>stop the scroll</em></span></span>
+                <span class="line-wrap"><span class="hero-line">&amp; boost your CTR.</span></span>
+            </h1>
+            <p class="hero-sub">
+                I'm sofku — a thumbnail designer helping creators dominate their niche.
+                Every design is built around one goal: more clicks.
+            </p>
+            <div class="hero-actions">
+                <button class="hero-btn" data-plan="General Inquiry">Work with me</button>
+                <a href="#projects" class="hero-btn-ghost">See my work →</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num"><span class="counter" data-target="120">0</span>+</span>
+                    <span class="stat-label">Thumbnails made</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">↑ CTR</span>
+                    <span class="stat-label">For every client</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">48hr</span>
+                    <span class="stat-label">Avg. turnaround</span>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <div class="scroll-dot"></div>
+            </div>
+        </section>
+
+        <section id="showcase" class="no-anim">
+            <div class="showcase-fade-left"></div>
+            <div class="showcase-fade-right"></div>
+            <div class="showcase-track showcase-row">
+                <img src="assets/imgs/1/1.jpg"                  alt="Thumbnail sample" />
+                <img src="assets/imgs/1/2.jpg"                  alt="Thumbnail sample" />
+                <img src="assets/imgs/1/3.jpg"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/1/4.jpg"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/1/5.jpg"      alt="Japan travel thumbnail" />
+                <img src="assets/imgs/1/6.jpg"                alt="Streamer thumbnail" />
+                <img src="assets/imgs/1/7.jpg"     alt="Thumbnail sample" />
+                <img src="assets/imgs/1/8.jpg"       alt="Thumbnail sample" />
+                <img src="assets/imgs/1/9.jpg" alt="Thumbnail sample" />
+                <img src="assets/imgs/1/10.jpg"           alt="Thumbnail sample" />
+                <!-- duplicate set for seamless loop -->
+                <img src="assets/imgs/1/1.jpg"                  alt="Thumbnail sample" />
+                <img src="assets/imgs/1/2.jpg"                  alt="Thumbnail sample" />
+                <img src="assets/imgs/1/3.jpg"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/1/4.jpg"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/1/5.jpg"      alt="Japan travel thumbnail" />
+                <img src="assets/imgs/1/6.jpg"                alt="Streamer thumbnail" />
+                <img src="assets/imgs/1/7.jpg"     alt="Thumbnail sample" />
+                <img src="assets/imgs/1/8.jpg"       alt="Thumbnail sample" />
+                <img src="assets/imgs/1/9.jpg" alt="Thumbnail sample" />
+                <img src="assets/imgs/1/10.jpg"           alt="Thumbnail sample" />
+            </div>
+            <div class="showcase-track showcase-row showcase-row-reverse">
+                <img src="assets/imgs/2/1.jpg"          alt="Thumbnail sample" />
+                <img src="assets/imgs/2/2.jpg"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/2/3.jpg"           alt="Thumbnail sample" />
+                <img src="assets/imgs/2/4.lnk"            alt="Thumbnail sample" />
+                <img src="assets/imgs/2/5.lnk"       alt="Thumbnail sample" />
+                <img src="assets/imgs/2/6.jpg" alt="Thumbnail sample" />
+                <img src="assets/imgs/2/7.lnk"     alt="Thumbnail sample" />
+                <img src="assets/imgs/2/8.jpg"       alt="Thumbnail sample" />
+                <img src="assets/imgs/2/9.jpg"     alt="Thumbnail sample" />
+                <img src="assets/imgs/2/10.jpg"           alt="Thumbnail sample" />
+                <!-- duplicate set for seamless loop -->
+                <img src="assets/imgs/2/1.jpg"          alt="Thumbnail sample" />
+                <img src="assets/imgs/2/2.jpg"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/2/3.jpg"           alt="Thumbnail sample" />
+                <img src="assets/imgs/2/4.lnk"            alt="Thumbnail sample" />
+                <img src="assets/imgs/2/5.lnk"       alt="Thumbnail sample" />
+                <img src="assets/imgs/2/6.jpg" alt="Thumbnail sample" />
+                <img src="assets/imgs/2/7.lnk"     alt="Thumbnail sample" />
+                <img src="assets/imgs/2/8.jpg"       alt="Thumbnail sample" />
+                <img src="assets/imgs/2/9.jpg"     alt="Thumbnail sample" />
+                <img src="assets/imgs/2/10.jpg"           alt="Thumbnail sample" />
+            </div>
+            <div class="showcase-track showcase-row">
+                <img src="assets/imgs/3/1.jpg"      alt="Japan travel thumbnail" />
+                <img src="assets/imgs/3/2.lnk"       alt="Thumbnail sample" />
+                <img src="assets/imgs/3/3.jpg"       alt="Thumbnail sample" />
+                <img src="assets/imgs/3/4.lnk"                  alt="Thumbnail sample" />
+                <img src="assets/imgs/3/5.lnk"                alt="Streamer thumbnail" />
+                <img src="assets/imgs/3/6.lnk"                alt="Thumbnail sample" />
+                <img src="assets/imgs/3/7.lnk"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/3/8.lnk"           alt="Thumbnail sample" />
+                <img src="assets/imgs/3/9.jpg"            alt="Thumbnail sample" />
+                <img src="assets/imgs/3/10.lnk"                  alt="Thumbnail sample" />
+                <!-- duplicate set for seamless loop -->
+                <img src="assets/imgs/3/1.jpg"      alt="Japan travel thumbnail" />
+                <img src="assets/imgs/3/2.lnk"       alt="Thumbnail sample" />
+                <img src="assets/imgs/3/3.jpg"       alt="Thumbnail sample" />
+                <img src="assets/imgs/3/4.lnk"                  alt="Thumbnail sample" />
+                <img src="assets/imgs/3/5.lnk"                alt="Streamer thumbnail" />
+                <img src="assets/imgs/3/6.lnk"                alt="Thumbnail sample" />
+                <img src="assets/imgs/3/7.lnk"                 alt="Thumbnail sample" />
+                <img src="assets/imgs/3/8.lnk"           alt="Thumbnail sample" />
+                <img src="assets/imgs/3/9.jpg"            alt="Thumbnail sample" />
+                <img src="assets/imgs/3/10.lnk"                  alt="Thumbnail sample" />
+            </div>
+        </section>
+
+        <section id="ctr">
+            <div class="ctr-inner">
+                <div class="ctr-left scroll-reveal" data-dir="left">
+                    <div class="bio-label">✦ why it matters</div>
+                    <h2>A great thumbnail is<br>your #1 growth lever.</h2>
+                    <p>
+                        YouTube's algorithm rewards clicks. A 1% CTR increase can double your
+                        impressions reaching new audiences — without touching a single thing in your video.
+                    </p>
+                    <p>
+                        I design thumbnails that are psychologically optimised: bold contrast,
+                        strong focal points, and curiosity gaps that make viewers feel like they
+                        <em>have</em> to click.
+                    </p>
+                    <button class="hero-btn" data-plan="CTR Boost Package">Boost my CTR →</button>
+                </div>
+                <div class="ctr-right scroll-reveal" data-dir="right">
+                    <div class="ctr-card">
+                        <div class="ctr-metric">
+                            <div class="ctr-bar-label">
+                                <span>Before sofku</span>
+                                <span class="ctr-val bad">2.1% CTR</span>
+                            </div>
+                            <div class="ctr-bar-track">
+                                <div class="ctr-bar-fill bad" data-width="21" style="width:0%"></div>
+                            </div>
+                        </div>
+                        <div class="ctr-metric">
+                            <div class="ctr-bar-label">
+                                <span>After sofku</span>
+                                <span class="ctr-val good">6.8% CTR</span>
+                            </div>
+                            <div class="ctr-bar-track">
+                                <div class="ctr-bar-fill good" data-width="68" style="width:0%"></div>
+                            </div>
+                        </div>
+                        <div class="ctr-note">↑ 3.2× more clicks — same video, same upload time.</div>
+                    </div>
+                    <div class="ctr-pills stagger-pills">
+                        <span>🎯 High contrast</span>
+                        <span>👁 Strong focal point</span>
+                        <span>🔥 Curiosity gap</span>
+                        <span>📱 Mobile-optimised</span>
+                        <span>⚡ A/B ready</span>
+                        <span>🧠 Psych-driven</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bio">
+            <div class="bio-inner scroll-reveal" data-dir="up">
+                <div class="bio-label">✦ about me</div>
+                <h2>Thumbnail designer<br>obsessed with clicks.</h2>
+                <div class="bio-body">
+                    <p>I'm sofku — a self-taught thumbnail designer with a deep understanding of what makes viewers stop scrolling. I've spent years studying the YouTube meta, testing what works across different niches, and refining a design process built entirely around one metric: CTR.</p>
+                    <p>Whether you're a solo creator or a growing channel, I'll craft thumbnails that represent your brand visually and consistently outperform your niche average.</p>
+                </div>
+                <div class="bio-skills stagger-pills">
+                    <span>Thumbnail Design</span>
+                    <span>CTR Optimisation</span>
+                    <span>Photoshop</span>
+                    <span>Color Psychology</span>
+                    <span>Typography</span>
+                    <span>A/B Testing</span>
+                    <span>Branding</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header scroll-reveal" data-dir="up">
+                <div class="bio-label">✦ selected work</div>
+                <h2>Thumbnails that clicked.</h2>
+                <p>Real designs, real results.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card large stagger-item" data-i="0">
+                    <div class="img-wrap">
+                        <img src="assets/imgs/1/7.jpg" alt="Japan travel vlog thumbnail" />
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Travel</span>
+                        <h3>Japan Travel Vlog</h3>
+                        <p>CTR jumped from 3.1% → 7.4% after redesign.</p>
+                    </div>
+                </div>
+                <div class="project-card stagger-item" data-i="1">
+                    <div class="img-wrap">
+                        <img src="assets/imgs/2/1.jpg" alt="Gaming streamer thumbnail" />
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Documentary</span>
+                        <h3>The Rise of Kai Cenat</h3>
+                        <p>High-energy layout built for fast-scroll feeds.</p>
+                    </div>
+                </div>
+                <div class="project-card stagger-item" data-i="2">
+                    <div class="img-wrap">
+                        <img src="assets/imgs/3/1.jpg" alt="Fashion thumbnail" />
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Documentary</span>
+                        <h3>The YouTube Giants</h3>
+                        <p>Clean editorial look that outperformed the niche avg.</p>
+                    </div>
+                </div>
+                <div class="project-card stagger-item" data-i="3">
+                    <div class="img-wrap">
+                        <img src="assets/imgs/1/5.jpg" alt="Lifestyle thumbnail" />
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Lifestyle</span>
+                        <h3>Lifestyle Series</h3>
+                        <p>Consistent visual branding across 12-video series.</p>
+                    </div>
+                </div>
+                <div class="project-card stagger-item" data-i="4">
+                    <div class="img-wrap">
+                        <img src="assets/imgs/1/4.jpg" alt="Finance thumbnail" />
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Gaming</span>
+                        <h3>Gaming Series</h3>
+                        <p>Bold, high-energy layout designed to stand out in a saturated gaming feed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="section-header scroll-reveal" data-dir="up">
+                <div class="bio-label">✦ pricing</div>
+                <h2>Simple, honest pricing.</h2>
+                <p>No subscriptions. Pay per thumbnail or grab a bundle.</p>
+            </div>
+            <div class="pricing-cards">
+
+                <div class="pricing-card stagger-item" data-i="0">
+                    <div class="plan-name">Single</div>
+                    <div class="price">$25<span>/thumbnail</span></div>
+                    <p class="plan-desc">Perfect for creators who need a one-off thumbnail that performs.</p>
+                    <ul>
+                        <li>✓ 1 custom thumbnail</li>
+                        <li>✓ 2 concept variations</li>
+                        <li>✓ Final PNG + PSD source file</li>
+                        <li>✓ 1 revision round</li>
+                        <li>✓ Delivered within 48 hours</li>
+                    </ul>
+                    <button data-plan="Single — $25/thumbnail">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured stagger-item" data-i="1">
+                    <div class="featured-badge">Best Value</div>
+                    <div class="plan-name">Bundle</div>
+                    <div class="price">$80<span>/5 thumbnails</span></div>
+                    <p class="plan-desc">Best for consistent uploaders who want maximum value and a cohesive channel look.</p>
+                    <ul>
+                        <li>✓ 5 custom thumbnails</li>
+                        <li>✓ 2 concept variations each</li>
+                        <li>✓ Final PNG + PSD source files</li>
+                        <li>✓ 2 revision rounds per thumbnail</li>
+                        <li>✓ Delivered within 5 days</li>
+                        <li>✓ Priority communication</li>
+                    </ul>
+                    <button data-plan="Bundle — $80/5 thumbnails">Get Started</button>
+                </div>
+
+                <div class="pricing-card stagger-item" data-i="2">
+                    <div class="plan-name">Retainer</div>
+                    <div class="price">Custom</div>
+                    <p class="plan-desc">For established channels that need a reliable, long-term design partner.</p>
+                    <ul>
+                        <li>✓ Unlimited monthly thumbnails</li>
+                        <li>✓ Dedicated creative direction</li>
+                        <li>✓ Same-day or next-day delivery</li>
+                        <li>✓ Unlimited revisions</li>
+                        <li>✓ Final PNG + PSD source files</li>
+                        <li>✓ Monthly performance review</li>
+                        <li>✓ Direct line of communication</li>
+                    </ul>
+                    <button class="outline-btn" data-plan="Retainer / Custom">Let's Talk</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="section-header scroll-reveal" data-dir="up">
+                <div class="bio-label">✦ voices of trust</div>
+                <h2>What creators are saying.</h2>
+                <p>Real reviews from real channels.</p>
+            </div>
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card stagger-item" data-i="0">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">JM</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Jake M.</div>
+                            <div class="reviewer-channel">@jakemlifestyle · 124K subs</div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">"sofku completely changed how my channel looks. My CTR went from 2.8% to 6.1% in two weeks. Nobody gets the YouTube meta like he does."</p>
+                    <div class="review-badge">CTR +118%</div>
+                </div>
+
+                <div class="testimonial-card featured-review stagger-item" data-i="1">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">AR</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Amir R.</div>
+                            <div class="reviewer-channel">@amirtechtalks · 89K subs</div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">"Honestly one of the best investments I've made for my channel. Fast turnaround, listens to feedback, and the thumbnails just perform. My last video hit rank #1 of 10 — first time ever."</p>
+                    <div class="review-badge">Rank #1 of 10</div>
+                </div>
+
+                <div class="testimonial-card stagger-item" data-i="2">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">SC</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Sofia C.</div>
+                            <div class="reviewer-channel">@sofiavlogs · 41K subs</div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">"Super professional, communicates clearly, and delivers exactly what you describe. My travel thumbnails finally stand out in a super competitive niche."</p>
+                    <div class="review-badge">Travel Niche</div>
+                </div>
+
+                <div class="testimonial-card stagger-item" data-i="3">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">DK</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Danny K.</div>
+                            <div class="reviewer-channel">@dannykgaming · 210K subs</div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">"We've been on a retainer for 3 months and my channel has never looked more consistent. Viewers actually recognise my thumbnails in their feed. That's brand power."</p>
+                    <div class="review-badge">3mo Retainer</div>
+                </div>
+
+                <div class="testimonial-card stagger-item" data-i="4">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">LT</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Lena T.</div>
+                            <div class="reviewer-channel">@lenafinance · 67K subs</div>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                    </div>
+                    <p class="review-text">"Great designer who knows what works for different niches. He redesigned 8 old thumbnails and impressions went up noticeably on all of them. 100% recommend."</p>
+                    <div class="review-badge">8 Redesigns</div>
+                </div>
+
+                <div class="testimonial-card stagger-item" data-i="5">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">NB</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Noah B.</div>
+                            <div class="reviewer-channel">@noahblifestyle · 33K subs</div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-text">"Ordered my first thumbnail bundle and the quality blew me away. Each one had 3 concepts and he nailed it on the first try every time. Fast, talented, easy to work with."</p>
+                    <div class="review-badge">Bundle x5</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="section-header scroll-reveal" data-dir="up">
+                <div class="bio-label">✦ FAQs</div>
+                <h2>Common questions.</h2>
+            </div>
+            <div class="faq-list">
+
+                <div class="faq-item stagger-item" data-i="0">
+                    <button class="faq-question">
+                        How do I order a thumbnail?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Click "Get Started" on any plan, fill in the short form with your video details, and I'll be in touch within 24 hours to get started.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item stagger-item" data-i="1">
+                    <button class="faq-question">
+                        What do I need to send you?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your video title, a short description, any reference thumbnails you like, and photos if you want your face in it. The more detail, the better the result.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item stagger-item" data-i="2">
+                    <button class="faq-question">
+                        How long does it take?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Single thumbnails are delivered within 48 hours. Bundle orders within 5 days. Retainer clients get same-day or next-day delivery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item stagger-item" data-i="3">
+                    <button class="faq-question">
+                        Will it actually improve my CTR?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Every design is built around CTR best practices — contrast, hierarchy, curiosity, and mobile readability. Most clients see a measurable improvement within the first 2 weeks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item stagger-item" data-i="4">
+                    <button class="faq-question">
+                        Do I get the source file?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes — all plans include the final PNG and the PSD source file so you can make small tweaks yourself if needed.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-inner scroll-reveal" data-dir="up">
+                <div class="bio-label">✦ let's work together</div>
+                <h2>Ready to get more<br>clicks on every video?</h2>
+                <p>Send me your video idea and I'll design a thumbnail that makes people stop scrolling. First order? Let's make it count.</p>
+                <button class="hero-btn" data-plan="General Inquiry">Get in touch →</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">sofku</div>
+            <p>© 2025 sofku. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+        <!-- ── Lightbox ─────────────────────────────────────────── -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+            <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8592;</button>
+            <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8594;</button>
+            <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+            <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+        </div>
+
+</body>
+</html>
